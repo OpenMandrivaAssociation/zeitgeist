@@ -1,6 +1,6 @@
 %define name zeitgeist
 %define version 0.2.0
-%define release %mkrel 1
+%define release %mkrel 2
 
 Summary: Event logging framework for the desktop
 Name: %{name}
@@ -16,7 +16,7 @@ BuildRequires: python-devel
 BuildRequires: intltool
 Requires: pygtk2.0
 Requires: python-dbus
-
+Requires: python-storm
 
 %description
 Zeitgeist is an "Event Logging Framework" that provides cross
@@ -47,6 +47,7 @@ rm -rf %{buildroot}
 
 %files -f %name.lang
 %defattr(-,root,root)
+%doc AUTHORS COPYRIGHT README TODO
 %_bindir/%name-daemon
 %_bindir/%name-datahub
 %py_puresitedir/%name
