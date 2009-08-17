@@ -1,12 +1,12 @@
 %define name zeitgeist
-%define version 0.2.0
-%define release %mkrel 2
+%define version 0.2.1
+%define release %mkrel 1
 
 Summary: Event logging framework for the desktop
 Name: %{name}
 Version: %{version}
 Release: %{release}
-Source0: http://edge.launchpad.net/zeitgeist/0.2/0.2/+download/%{name}-%{version}.tar.gz
+Source0: http://launchpad.net/zeitgeist/0.2/%version/+download/%{name}_%{version}.orig.tar.gz
 License: LGPLv3
 Group: System/Libraries
 Url: http://launchpad.net/gnome-zeitgeist
@@ -47,7 +47,7 @@ rm -rf %{buildroot}
 
 %files -f %name.lang
 %defattr(-,root,root)
-%doc AUTHORS COPYRIGHT README TODO
+%doc AUTHORS COPYRIGHT README NEWS
 %_bindir/%name-daemon
 %_bindir/%name-datahub
 %py_puresitedir/%name
