@@ -1,19 +1,21 @@
 %define name zeitgeist
-%define version 0.3.3.1
+%define version 0.5.0
 %define release %mkrel 1
 
 Summary: Event logging framework for the desktop
 Name: %{name}
 Version: %{version}
 Release: %{release}
-Source0: http://launchpad.net/zeitgeist/0.3/%version/+download/%{name}-%{version}.tar.gz
+Source0: http://launchpad.net/%name/0.5/%version/+download/%name-%version.tar.gz
 License: LGPLv3
 Group: System/Libraries
-Url: http://launchpad.net/gnome-zeitgeist
+Url: http://launchpad.net/zeitgeist
 BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-buildroot
 BuildArch: noarch
 BuildRequires: python-devel
 BuildRequires: intltool
+BuildRequires: raptor
+BuildRequires: python-rdflib
 Requires: pygtk2.0
 Requires: python-dbus
 Requires: python-storm
@@ -32,6 +34,7 @@ activities in a readable way.
 
 %prep
 %setup -q
+%apply_patches
 
 %build
 %configure2_5x
@@ -39,7 +42,7 @@ activities in a readable way.
 
 %install
 rm -rf %{buildroot}
-%makeinstall_std
+%makeinstall_std pkgconfigdir=%_datadir/pkgconfig
 %find_lang %name
 
 %clean
@@ -55,4 +58,4 @@ rm -rf %{buildroot}
 %_datadir/dbus-1/services/org.gnome.zeitgeist.service
 %_mandir/man1/%name-daemon.1*
 %_mandir/man1/%name-datahub.1*
-
+%_datadir/pkgconfig/zeitgeist-daemon.pc
