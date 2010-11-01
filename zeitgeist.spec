@@ -1,12 +1,12 @@
 %define name zeitgeist
-%define version 0.5.1
-%define release %mkrel 2
+%define version 0.6
+%define release %mkrel 1
 
 Summary: Event logging framework for the desktop
 Name: %{name}
 Version: %{version}
 Release: %{release}
-Source0: http://launchpad.net/%name/0.5/%version/+download/%name-%version.tar.gz
+Source0: http://launchpad.net/%name/0.6/%version/+download/%name-%version.tar.gz
 License: LGPLv3
 Group: System/Libraries
 Url: http://launchpad.net/zeitgeist
@@ -44,6 +44,7 @@ activities in a readable way.
 rm -rf %{buildroot}
 %makeinstall_std pkgconfigdir=%_datadir/pkgconfig
 %find_lang %name
+rm -f %buildroot%_mandir/man1/%name-datahub.1*
 
 %clean
 rm -rf %{buildroot}
@@ -52,10 +53,8 @@ rm -rf %{buildroot}
 %defattr(-,root,root)
 %doc AUTHORS COPYRIGHT README NEWS
 %_bindir/%name-daemon
-%_bindir/%name-datahub
 %py_puresitedir/%name
 %_datadir/%name
 %_datadir/dbus-1/services/org.gnome.zeitgeist.service
 %_mandir/man1/%name-daemon.1*
-%_mandir/man1/%name-datahub.1*
 %_datadir/pkgconfig/zeitgeist-daemon.pc
