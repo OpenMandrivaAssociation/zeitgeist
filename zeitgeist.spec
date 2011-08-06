@@ -1,5 +1,5 @@
 %define name zeitgeist
-%define version 0.8.1
+%define version 0.8.1.1
 %define release %mkrel 1
 
 Summary: Event logging framework for the desktop
