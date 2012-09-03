@@ -15,6 +15,7 @@ BuildRequires: python-devel
 BuildRequires: xapian-devel
 BuildRequires: intltool
 BuildRequires: raptor
+BuildRequires: pkgconfig(dbus-1)
 BuildRequires: python-rdflib
 Requires: pygtk2.0
 Requires: python-dbus
