@@ -1,17 +1,16 @@
 %define name zeitgeist
-%define version 0.8.2
+%define version 0.9.5
 %define release %mkrel 1
 
 Summary: Event logging framework for the desktop
 Name: %{name}
 Version: %{version}
 Release: %{release}
-Source0: http://launchpad.net/%name/0.8/%version/+download/%name-%version.tar.gz
+Source0: https://launchpad.net/zeitgeist/0.9/%{version}/+download/%{name}-%{version}.tar.bz2
 License: LGPLv3
 Group: System/Libraries
 Url: http://launchpad.net/zeitgeist
-BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-buildroot
-BuildArch: noarch
+#BuildArch: noarch
 BuildRequires: python-devel
 BuildRequires: intltool
 BuildRequires: raptor
@@ -46,11 +45,7 @@ rm -rf %{buildroot}
 %find_lang %name
 rm -f %buildroot%_mandir/man1/%name-datahub.1*
 
-%clean
-rm -rf %{buildroot}
-
 %files -f %name.lang
-%defattr(-,root,root)
 %doc AUTHORS COPYRIGHT README NEWS
 %_bindir/%name-daemon
 %py_puresitedir/%name
