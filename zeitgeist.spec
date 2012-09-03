@@ -12,6 +12,7 @@ Group: System/Libraries
 Url: http://launchpad.net/zeitgeist
 #BuildArch: noarch
 BuildRequires: python-devel
+BuildRequires: xapian-devel
 BuildRequires: intltool
 BuildRequires: raptor
 BuildRequires: python-rdflib
