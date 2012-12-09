@@ -1,25 +1,20 @@
-%define name zeitgeist
-%define version 0.9.5
-%define release %mkrel 1
-
-Summary: Event logging framework for the desktop
-Name: %{name}
-Version: %{version}
-Release: %{release}
-Source0: https://launchpad.net/zeitgeist/0.9/%{version}/+download/%{name}-%{version}.tar.bz2
-License: LGPLv3
-Group: System/Libraries
-Url: http://launchpad.net/zeitgeist
-#BuildArch: noarch
-BuildRequires: python-devel
-BuildRequires: xapian-devel
-BuildRequires: intltool
-BuildRequires: raptor
-BuildRequires: pkgconfig(dbus-1)
-BuildRequires: python-rdflib
-Requires: pygtk2.0
-Requires: python-dbus
-Requires: python-storm
+Summary:	Event logging framework for the desktop
+Name:		zeitgeist
+Version:	0.9.5
+Release:	1
+Source0:	http://launchpad.net/%{name}/0.9/%{version}/+download/%{name}-%{version}.tar.bz2
+License:	LGPLv3
+Group:		System/Libraries
+Url:		http://launchpad.net/zeitgeist
+BuildRequires:	python-devel
+BuildRequires:	xapian-devel
+BuildRequires:	intltool
+BuildRequires:	raptor
+BuildRequires:	pkgconfig(dbus-1)
+BuildRequires:	python-rdflib
+Requires:	pygtk2.0
+Requires:	python-dbus
+Requires:	python-storm
 
 %description
 Zeitgeist is an "Event Logging Framework" that provides cross
@@ -42,16 +37,17 @@ activities in a readable way.
 %make
 
 %install
-rm -rf %{buildroot}
-%makeinstall_std pkgconfigdir=%_datadir/pkgconfig
-%find_lang %name
-rm -f %buildroot%_mandir/man1/%name-datahub.1*
+%makeinstall_std pkgconfigdir=%{_datadir}/pkgconfig
+rm -f %{buildroot}%{_mandir}/man1/%{name}-datahub.1*
+rm -rf %{buildroot}%{_prefix}/doc/
 
-%files -f %name.lang
-%doc AUTHORS COPYRIGHT README NEWS
-%_bindir/%name-daemon
-%py_puresitedir/%name
-%_datadir/%name
-%_datadir/dbus-1/services/org.gnome.zeitgeist.service
-%_mandir/man1/%name-daemon.1*
-%_datadir/pkgconfig/zeitgeist-daemon.pc
+%files
+%doc AUTHORS NEWS
+%{_bindir}/%{name}-daemon
+%{py_puresitedir}/%{name}
+%{_datadir}/%{name}
+%{_libdir}/zeitgeist-fts
+%{_datadir}/dbus-1/services/org.gnome.zeitgeist.service
+%{_mandir}/man1/%{name}-daemon.1*
+%{_datadir}/dbus-1/services/org.gnome.zeitgeist.fts.service
+
