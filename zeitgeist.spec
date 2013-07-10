@@ -82,12 +82,15 @@ rm -rf %{buildroot}%{_prefix}/doc/
 %files
 %doc AUTHORS NEWS
 %{_bindir}/%{name}-daemon
+%{_bindir}/%{name}-datahub
 %{py_puresitedir}/%{name}
 %{_datadir}/%{name}
 %{_libdir}/zeitgeist-fts
 %{_datadir}/dbus-1/services/org.gnome.zeitgeist.service
 %{_mandir}/man1/%{name}-daemon.1*
 %{_datadir}/dbus-1/services/org.gnome.zeitgeist.fts.service
+%{_sysconfdir}/xdg/autostart/%{name}-datahub.desktop
+%{_datadir}/bash-completion/completions/%{name}-daemon
 
 %files -n %{lib_name}
 %{_libdir}/lib%{name}-%{api_version}.so.%{lib_major}
