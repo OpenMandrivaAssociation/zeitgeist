@@ -13,7 +13,7 @@ Source0:	http://launchpad.net/%{name}/0.9/%{version}/+download/%{name}-%{version
 License:	LGPLv3
 Group:		System/Libraries
 Url:		http://launchpad.net/zeitgeist
-BuildRequires:	python-devel
+BuildRequires:	pkgconfig(python3)
 BuildRequires:	intltool
 BuildRequires:	xapian-devel
 BuildRequires:	raptor2
@@ -71,7 +71,7 @@ with %{name}.
 %apply_patches
 
 %build
-%configure2_5x
+%configure
 %make
 
 %install
