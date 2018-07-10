@@ -8,7 +8,7 @@
 Summary:	Event logging framework for the desktop
 Name:		zeitgeist
 Version:	0.9.14
-Release:	9
+Release:	10
 Source0:	http://launchpad.net/%{name}/0.9/%{version}/+download/%{name}-%{version}.tar.xz
 License:	LGPLv3
 Group:		System/Libraries
