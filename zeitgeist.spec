@@ -7,8 +7,8 @@
 
 Summary:	Event logging framework for the desktop
 Name:		zeitgeist
-Version:	1.0.1
-Release:	2
+Version:	1.0.2
+Release:	1
 Source0:	http://launchpad.net/%{name}/1.0/%{version}/+download/%{name}-%{version}.tar.xz
 License:	LGPLv3
 Group:		System/Libraries
@@ -72,10 +72,10 @@ with %{name}.
 
 %build
 %configure
-%make
+%make_build
 
 %install
-%makeinstall_std pkgconfigdir=%{_datadir}/pkgconfig
+%make_install pkgconfigdir=%{_datadir}/pkgconfig
 rm -f %{buildroot}%{_mandir}/man1/%{name}-datahub.1*
 rm -rf %{buildroot}%{_prefix}/doc/
 
