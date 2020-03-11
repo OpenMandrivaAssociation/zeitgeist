@@ -25,7 +25,7 @@ BuildRequires:	pkgconfig(gtk+-3.0)
 BuildRequires:	pkgconfig(json-glib-1.0)
 BuildRequires:	pkgconfig(telepathy-glib)
 BuildRequires:	vala-devel
-Requires:	pygtk2.0
+Requires:	python3dist(pyxdg)
 Requires:	python-dbus
 Requires:	python-storm
 
@@ -106,4 +106,3 @@ rm -rf %{buildroot}%{_prefix}/doc/
 %{_datadir}/gir-1.0/*-%{gir_major}.gir
 %{_datadir}/vala/vapi/*.vapi
 %{_datadir}/vala/vapi/*.deps
-
