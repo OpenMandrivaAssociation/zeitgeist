@@ -7,11 +7,9 @@
 
 Summary:	Event logging framework for the desktop
 Name:		zeitgeist
-Version:	1.0.3
-Release:	3
+Version:	1.0.4
+Release:	1
 Source0:	http://launchpad.net/%{name}/1.0/%{version}/+download/%{name}-%{version}.tar.xz
-# PATCH-FIX-UPSTREAM -- Use GenericArray API only
-Patch0:         0001-use-genericarray-api-only.patch
 
 License:	LGPLv3
 Group:		System/Libraries
