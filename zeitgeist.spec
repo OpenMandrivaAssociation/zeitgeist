@@ -5,10 +5,12 @@
 %define libnamedev      %mklibname -d %{name} %{api_version} 
 %define gir_name        %mklibname %{name}-gir %{gir_major}
 
+%global optflags %{optflags} -Wno-error=incompatible-function-pointer-types
+
 Summary:	Event logging framework for the desktop
 Name:		zeitgeist
 Version:	1.0.4
-Release:	5
+Release:	6
 Source0:	http://launchpad.net/%{name}/1.0/%{version}/+download/%{name}-%{version}.tar.xz
 
 License:	LGPLv3
