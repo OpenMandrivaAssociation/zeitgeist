@@ -10,12 +10,12 @@
 Summary:	Event logging framework for the desktop
 Name:		zeitgeist
 Version:	1.0.4
-Release:	8
-Source0:	http://launchpad.net/%{name}/1.0/%{version}/+download/%{name}-%{version}.tar.xz
+Release:	9
+Source0:	https://launchpad.net/%{name}/1.0/%{version}/+download/%{name}-%{version}.tar.xz
 
 License:	LGPLv3
 Group:		System/Libraries
-Url:		http://launchpad.net/zeitgeist
+Url:		https://launchpad.net/zeitgeist
 BuildRequires:	pkgconfig(python3)
 BuildRequires:	intltool
 BuildRequires:	xapian-devel
