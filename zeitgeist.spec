@@ -16,6 +16,7 @@ Source0:	https://launchpad.net/%{name}/1.0/%{version}/+download/%{name}-%{versio
 License:	LGPLv3
 Group:		System/Libraries
 Url:		https://launchpad.net/zeitgeist
+BuildRequires:  make
 BuildRequires:	pkgconfig(python3)
 BuildRequires:	intltool
 BuildRequires:	xapian-devel
