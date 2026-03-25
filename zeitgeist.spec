@@ -79,6 +79,8 @@ with %{name}.
 %autopatch -p1
 
 %build
+ln -sf %{_bindir}/libtoolize slibtoolize
+export PATH=$PWD:$PATH
 export LIBTOOLIZE=%{_bindir}/libtoolize
 export LIBTOOL=%{_bindir}/libtool
 %configure LIBTOOL=%{_bindir}/libtool
