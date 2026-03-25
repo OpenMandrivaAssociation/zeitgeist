@@ -10,7 +10,7 @@
 Summary:	Event logging framework for the desktop
 Name:		zeitgeist
 Version:	1.0.4
-Release:	12
+Release:	14
 Source0:	https://launchpad.net/%{name}/1.0/%{version}/+download/%{name}-%{version}.tar.xz
 
 License:	LGPLv3
@@ -33,7 +33,7 @@ BuildRequires:	pkgconfig(gtk+-3.0)
 BuildRequires:	pkgconfig(json-glib-1.0)
 BuildRequires:	pkgconfig(telepathy-glib)
 BuildRequires:	vala-devel
-Requires:	python3dist(pyxdg)
+Requires:	python%{pyver}dist(pyxdg)
 Requires:	python-dbus
 Requires:	python-storm
 
