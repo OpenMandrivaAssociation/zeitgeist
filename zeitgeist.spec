@@ -79,6 +79,8 @@ with %{name}.
 %autopatch -p1
 
 %build
+export LIBTOOLIZE=%{_bindir}/libtoolize
+export LIBTOOL=%{_bindir}/libtool
 %configure LIBTOOL=%{_bindir}/libtool
 %make_build
 
