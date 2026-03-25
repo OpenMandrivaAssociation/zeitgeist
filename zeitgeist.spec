@@ -18,8 +18,8 @@ Group:		System/Libraries
 Url:		https://launchpad.net/zeitgeist
 BuildRequires:	autoconf
 BuildRequires:	automake
-BuildRequires:	libtool-base
-BuildRequires:	slibtool
+BuildRequires:	libtool-base libtool
+#BuildRequires:	slibtool
 BuildRequires:  make
 BuildRequires:	pkgconfig(python3)
 BuildRequires:	intltool
@@ -80,7 +80,7 @@ with %{name}.
 
 %build
 # try fix build with slibtool
-find . -name Makefile -exec sed -i 's/-version-info 0:0:/-version-info 0:0:0/g' {} +
+#find . -name Makefile -exec sed -i 's/-version-info 0:0:/-version-info 0:0:0/g' {} +
 %configure
 %make_build
 
