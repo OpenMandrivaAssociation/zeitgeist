@@ -19,7 +19,7 @@ Url:		https://launchpad.net/zeitgeist
 BuildRequires:	autoconf
 BuildRequires:	automake
 BuildRequires:	libtool-base
-BuildRequires:	slibtool
+#BuildRequires:	slibtool
 BuildRequires:  make
 BuildRequires:	pkgconfig(python3)
 BuildRequires:	intltool
