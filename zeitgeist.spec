@@ -18,7 +18,7 @@ Group:		System/Libraries
 Url:		https://launchpad.net/zeitgeist
 BuildRequires:	autoconf
 BuildRequires:	automake
-BuildRequires:	libtool-base libtool
+BuildRequires:	libtool
 #BuildRequires:	slibtool
 BuildRequires:  make
 BuildRequires:	pkgconfig(python3)
