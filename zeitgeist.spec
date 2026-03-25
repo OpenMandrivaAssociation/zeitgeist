@@ -6,6 +6,7 @@
 %define gir_name        %mklibname %{name}-gir %{gir_major}
 
 %global optflags %{optflags} -Wno-error=incompatible-function-pointer-types
+%global optflags %{optflags} -Wno-error=incompatible-pointer-types
 
 Summary:	Event logging framework for the desktop
 Name:		zeitgeist
@@ -79,6 +80,9 @@ with %{name}.
 %autopatch -p1
 
 %build
+# ej fak ju
+# not compiling with slibtollize
+# try back to libtool but it is not so simple
 ln -sf %{_bindir}/libtoolize slibtoolize
 export PATH=$PWD:$PATH
 export LIBTOOLIZE=%{_bindir}/libtoolize
